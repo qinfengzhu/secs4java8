@@ -752,7 +752,7 @@ class Secs2Test {
 		for (int i = 0, m = s2.size(); i < m; ++i) {
 			
 			assertEquals(
-					assertSecs2GetSuccess(s2::getByte, i),
+					(byte)assertSecs2GetSuccess(s2::getByte, i),
 					ref[i]);
 			assertSecs2GetFail(s2::getByte, 0, i);
 			
@@ -794,12 +794,12 @@ class Secs2Test {
 		for (int i = 0, m = s2.size(); i < m; ++i) {
 			
 			assertEquals(
-					assertSecs2GetSuccess(s2::getInt, i),
+					(int)assertSecs2GetSuccess(s2::getInt, i),
 					ref[i].intValue());
 			assertSecs2GetFail(s2::getInt, 0, i);
 			
 			assertEquals(
-					assertSecs2GetSuccess(s2::getLong, i),
+					(long)assertSecs2GetSuccess(s2::getLong, i),
 					ref[i].longValue());
 			assertSecs2GetFail(s2::getLong, 0, i);
 			
@@ -849,7 +849,7 @@ class Secs2Test {
 		
 		for (int i = 0, m = s2.size(); i < m; ++i) {
 			
-			assertEquals(assertSecs2GetSuccess(s2::getFloat, i), ref[i]);
+			assertEquals((float)assertSecs2GetSuccess(s2::getFloat, i), ref[i]);
 			assertSecs2GetFail(s2::getFloat, 0, i);
 			
 			assertEquals(
@@ -883,7 +883,7 @@ class Secs2Test {
 		
 		for (int i = 0, m = s2.size(); i < m; ++i) {
 			
-			assertEquals(assertSecs2GetSuccess(s2::getDouble, i), ref[i]);
+			assertEquals((double)assertSecs2GetSuccess(s2::getDouble, i), ref[i]);
 			assertSecs2GetFail(s2::getDouble, 0, i);
 			
 			assertEquals(
