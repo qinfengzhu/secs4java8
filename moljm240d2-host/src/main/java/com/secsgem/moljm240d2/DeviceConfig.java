@@ -10,6 +10,9 @@ import java.util.Map;
  * MOLJM-240D2 设备配置常量类。
  * <p>
  * 包含设备名称、SVID、CEID、RPTID、ALID 等所有静态配置信息。
+ * 在 SECS/GEM 中，CEID（收集事件 ID）与 ReportId（报告 ID，常写作 RPTID）是“事件”与“数据模板”的绑定关系。
+ * CEID 标识“发生了什么”，ReportId 定义“发生这件事时应该上报哪些数据”。
+ * 一个 CEID 可以关联一个或多个 ReportId，而一个 ReportId 则包含一组具体的变量（VID/SVID）。
  * </p>
  */
 public final class DeviceConfig {
